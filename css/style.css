@@ -1,0 +1,45 @@
+      body{
+        background-color: orange;
+      }
+      h2 {
+        text-align: center;
+        background-color: red;
+      }
+      h3 {
+        font-style: italic;
+        margin-top: 0;
+      }
+      li {
+        display: inline-block;
+        clear: none;
+        background-color: yellow;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+      }
+      nav{
+        background-color: blue;
+      }
+      section{
+        background-color: green;
+      }
+      article{
+        background-color: purple;
+        border: solid black;
+      }
+      #home_container{
+      }
+      #Scores {
+        float: left;
+        position: relative;
+
+        padding: 5px;
+      }
+      #NextGames {
+        float: left;
+        position: relative;
+
+        padding: 5px;
+      }
+      #FBdeck {
+      }
