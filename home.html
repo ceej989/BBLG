@@ -10,6 +10,10 @@
 				text-align: center;
 				background-color: red;
 			}
+			h3 {
+				font-style: italic;
+				margin-top: 0;
+			}
 			li {
 				display: inline-block;
 				clear: none;
@@ -21,10 +25,31 @@
 			nav{
 				background-color: blue;
 			}
-			article{
+			section{
 				background-color: green;
 			}
-
+			article{
+				background-color: purple;
+				border: solid black;
+			}
+			#home_container{
+				border: solid white;
+			}
+			#Scores {
+				float: left;
+				position: relative;
+				margin: 0 5px 5px 5px;
+				padding: 5px;
+			}
+			#NextGames {
+				float: left;
+				position: relative;
+				margin: 0 5px;
+				padding: 5px;
+			}
+			#FBdeck {
+				border: solid white;
+			}
 		</style>
 	</head>
 	<body class="container container_12">
@@ -34,20 +59,42 @@
 		</header>
 		<nav class="grid_12"> 
 			<ul>
-				<li class="grid_2"> Home </li>
-				<li class="grid_2"> Teams </li>
-				<li class="grid_2"> Players </li>
-				<li class="grid_2"> Standings </li>
-				<li class="grid_2"> About </li>
+				<a href="#"><li class="grid_2"> Home </li></a>
+				<a href="#"><li class="grid_2"> Teams </li></a>
+				<a href="#"><li class="grid_2"> Players </li></a>
+				<a href="#"><li class="grid_2"> Standings </li></a>
+				<a href="#"><li class="grid_2"> About </li></a>
 			</ul>
 		</nav>
 
-		<article class="grid_7 suffix_5">
-			<section>
+		<section id="home_container" class="grid_7">
+			<header id="banner">
 				<p> Welcome to the one stop shop for your LIMC League Info!</p>	
-			</section>	
-
-		</article>			
+			</header>	
+			<section id="news_section">
+				<article id="Scores">
+					<h3>Latest Scores</h3>
+					<p>Team A 32 Team B 16</p>
+					<p>Team C 19 Team D 25</p>
+				</article>	
+				<article id="NextGames">
+					<h3>Upcoming Games</h3>
+					<p> Team C (2-2) vs Team A (1-3)</p>
+					<p> Team B (0-4) vs Team D (3-1)</p>
+				</article>
+			</section>
+		</section>
+		<section id="FBdeck" class="grid_4">
+			<article>
+				<h3>Facebook Roll</h3>
+				<p>FBUser: hi</p>
+				<p>FBUser: hi</p>
+				<p>FBUser: hi</p>
+				<p>FBUser: hi</p>
+				<p>FBUser: hi</p>
+				<p>FBUser: hi</p>
+			</article>
+		</section>			
 
 
 	</body>	
