@@ -1,33 +1,61 @@
       body{
-        background-color: orange;
+        background-color: #0A64A4;
       }
       h2 {
-        text-align: center;
-        background-color: red;
+        text-align: left;
+        background-color: #061F70;
+        padding-top:10px;
+        padding-bottom: 10px;
+        color: white;
+        font-family: Arial;
+        font-style: italic;
+
       }
       h3 {
         font-style: italic;
         margin-top: 0;
+        color: white;
+        font-family: Arial;
+        text-align: center;
       }
-      li {
-        display: inline-block;
-        clear: none;
-        background-color: yellow;
-        font-size: 12px;
+      ul {
+
+      }
+      li{
+        display: block;
+        background-color: #FFD900;
+        font-size: 20px;
+        font-family: Arial;
         font-weight: bold;
         text-align: center;
+        border-top: solid black;
+        border-right: solid black;
+        border-left: solid black;
+      }
+      #nh li{
+        background-color: #FFEA73;
+      }
+      a {
+        display: block;
+        text-decoration: none;
       }
       nav{
         background-color: blue;
+        padding-bottom: 15px;
       }
       section{
         background-color: green;
       }
       article{
-        background-color: purple;
-        border: solid black;
+        background-color: #FF7C00;
+        
       }
       #home_container{
+        background-color: #FFEA73;
+        border-left: solid black;
+        border-right: solid black;
+        border-bottom: solid black;
+        border-top: solid black;
       }
       #Scores {
         float: left;
@@ -38,8 +66,12 @@
       #NextGames {
         float: left;
         position: relative;
-
         padding: 5px;
       }
       #FBdeck {
+      }
+      footer p{
+        font-family: Arial;
+        font-size: 12px;
+        text-align: center;
       }
