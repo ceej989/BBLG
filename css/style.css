@@ -1,5 +1,10 @@
       body{
         background-color: #0A64A4;
+
+      }
+      p {
+        color: white;
+        right: 40px;
       }
       h2 {
         text-align: left;
@@ -17,9 +22,14 @@
         color: white;
         font-family: Arial;
         text-align: center;
+        top:25px;
       }
       ul {
 
+      }
+      hr{
+        margin-left: 15px;
+        margin-right: 40px;
       }
       li{
         display: block;
@@ -28,9 +38,7 @@
         font-family: Arial;
         font-weight: bold;
         text-align: center;
-        border-top: solid black;
-        border-right: solid black;
-        border-left: solid black;
+   
       }
       #nh li{
         background-color: #FFEA73;
@@ -44,29 +52,25 @@
         padding-bottom: 15px;
       }
       section{
-        background-color: green;
+        
       }
       article{
         background-color: #FF7C00;
         
       }
       #home_container{
-        background-color: #FFEA73;
-        border-left: solid black;
-        border-right: solid black;
-        border-bottom: solid black;
-        border-top: solid black;
+        background-color: #0A64A4;
       }
       #Scores {
         float: left;
         position: relative;
 
-        padding: 5px;
+        
       }
       #NextGames {
         float: left;
         position: relative;
-        padding: 5px;
+        
       }
       #FBdeck {
       }
