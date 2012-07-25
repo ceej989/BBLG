@@ -1,110 +1,130 @@
-      body{
-        background-color: #0A64A4;
+body{
+  background-color: #0A64A4;
+}
 
-      }
-      p {
-        color: white;
-        font-family: Arial;
-        font-size: 16px;
+p {
+  color: white;
+  font-family: Arial;
+  font-size: 16px;
 
-      }
-      h2 {
-        text-align: left;
-        background-color: #061F70;
-        padding-top:10px;
-        padding-bottom: 10px;
-        color: white;
-        font-family: Arial;
-        
+}
 
-      }
-      h3 {
-        font-style: italic;
-        margin-top: 0;
-        color: white;
-        font-family: Arial;
-        text-align: center;
-        top:30px;
-      }
-      ul {
+h2 {
+  text-align: left;
+  background-color: #061F70;
+  padding-top:10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: Arial;
+}
 
-      }
-      hr{
-        margin-left: 15px;
-        margin-right: 40px;
-      }
-      li{
-        display: block;
-        background-color: none;
-        font-size: 20px;
-        font-family: Arial;
-        font-weight: bold;
-        text-align: center;
-   
-      }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        color: yellow;
-      }
-      nav{
-        background-color: blue;
-        padding-bottom: 10px;
-      }
-      section{
-        
-      }
-      article{
-        background-color: #FF7C00;
-        
-      }
-      #home_container{
-        background-color: #0A64A4;
-      }
-      #Scores {
-        float: left;
-        position: relative;
+h3 {
+  font-style: italic;
+  margin-top: 0;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  top:30px;
+}
 
-        
-      }
-      #NextGames {
-        float: left;
-        position: relative;
-        
-      }
-      #FBdeck {
-      }
-      footer p{
-        font-family: Arial;
-        font-size: 12px;
-        text-align: center;
-      }
+header {
+  position:relative;
+  z-index: 2;
+}
 
-      img.center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
+/* NAV LIST STUFF */
+ul#main_nav {
+  width:100%;
+  list-style: none;
+  display:inline;
+  text-align: center;
+  padding-left:30%;
+}
 
-      /*nav menu items */
-      a.nav_home{
-        background-image: url("images/home.png");
-      }
-      a.nav_home:hover{
-        background-image: url('images/home_hvr.png');
-      }
-      
-      #nav_teams{
-        background-image: url(images/teams.png);
-      }
-      #nav_teams:hover{}
-      
-      #nav_players{
-        background-image: url(images/players.png);
-      }
-      #nav_players:hover{}
-      
-      #nav_standings{
-        background-image: url(images/standings.png);
-      }
-      #nav_standings:hover{}
+ul#main_nav li {
+  position:relative;
+  margin-left:60px;
+  margin-top:-12px;
+  float:left;
+}
+
+ul#main_nav li a {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 2.1em;
+  color: #fff;
+}
+
+ul#main_nav li a:hover {
+  color: #FF7C00;
+}
+
+hr{
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: yellow;
+}
+nav{
+  background-color: blue;
+  padding-bottom: 10px;
+}
+section{
+
+}
+article{
+  background-color: #FF7C00;
+  
+}
+#home_container{
+  background-color: #0A64A4;
+}
+#Scores {
+  float: left;
+  position: relative;
+
+  
+}
+#NextGames {
+  float: left;
+  position: relative;
+  
+}
+
+footer p{
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*nav menu items */
+a.nav_home{
+  background-image: url("images/home.png");
+}
+a.nav_home:hover{
+  background-image: url('images/home_hvr.png');
+}
+
+#nav_teams{
+  background-image: url(images/teams.png);
+}
+#nav_teams:hover{}
+
+#nav_players{
+  background-image: url(images/players.png);
+}
+#nav_players:hover{}
+
+#nav_standings{
+  background-image: url(images/standings.png);
+}
+#nav_standings:hover{}
