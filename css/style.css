@@ -4,7 +4,9 @@
       }
       p {
         color: white;
-        right: 40px;
+        font-family: Arial;
+        font-size: 16px;
+
       }
       h2 {
         text-align: left;
@@ -13,7 +15,7 @@
         padding-bottom: 10px;
         color: white;
         font-family: Arial;
-        font-style: italic;
+        
 
       }
       h3 {
@@ -22,7 +24,7 @@
         color: white;
         font-family: Arial;
         text-align: center;
-        top:25px;
+        top:30px;
       }
       ul {
 
@@ -33,7 +35,7 @@
       }
       li{
         display: block;
-        background-color: #FFD900;
+        background-color: none;
         font-size: 20px;
         font-family: Arial;
         font-weight: bold;
@@ -41,11 +43,12 @@
    
       }
       #nh li{
-        background-color: #FFEA73;
+        background-color: none;
       }
       a {
-        display: block;
+        display: inline-block;
         text-decoration: none;
+        color: yellow;
       }
       nav{
         background-color: blue;
@@ -78,4 +81,10 @@
         font-family: Arial;
         font-size: 12px;
         text-align: center;
+      }
+
+      img.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
