@@ -87,11 +87,11 @@
       }
 
       /*nav menu items */
-      #nav_home{
-        background-image: url(images/home.png);
+      a.nav_home{
+        background-image: url("images/home.png");
       }
-      #nav_home:hover{
-        background-image: url(images/home_hvr.png);
+      a.nav_home:hover{
+        background-image: url('images/home_hvr.png');
       }
       
       #nav_teams{
