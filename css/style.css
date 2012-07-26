@@ -19,38 +19,33 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
+  font-style: normal;
   margin-top: 0;
   color: white;
   font-family: Arial;
-  text-align: center;
-  top:30px;
 }
 
 header {
   position:relative;
+  background:#fff;
   z-index: 2;
 }
 
 /* NAV LIST STUFF */
 ul#main_nav {
   width:100%;
-  list-style: none;
-  display:inline;
-  text-align: center;
-  padding-left:30%;
+  list-style: none;  
+  margin-top:-10px;
 }
 
 ul#main_nav li {
-  position:relative;
-  margin-left:60px;
-  margin-top:-12px;
-  float:left;
+  display:inline;
+  
 }
 
 ul#main_nav li a {
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 2.1em;
+  font-size: 2em;
   color: #fff;
 }
 
@@ -77,8 +72,14 @@ section{
 }
 article{
   background-color: #FF7C00;
-  
+  display:inline-block;
 }
+
+#news_section {
+  margin-top:80px;
+
+}
+
 #home_container{
   background-color: #0A64A4;
 }
@@ -105,26 +106,3 @@ img.center {
   margin-left: auto;
   margin-right: auto;
 }
-
-/*nav menu items */
-a.nav_home{
-  background-image: url("images/home.png");
-}
-a.nav_home:hover{
-  background-image: url('images/home_hvr.png');
-}
-
-#nav_teams{
-  background-image: url(images/teams.png);
-}
-#nav_teams:hover{}
-
-#nav_players{
-  background-image: url(images/players.png);
-}
-#nav_players:hover{}
-
-#nav_standings{
-  background-image: url(images/standings.png);
-}
-#nav_standings:hover{}
