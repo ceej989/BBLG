@@ -14,10 +14,10 @@ Simple clean design that allows users to navigate quickly and easily on screens 
 * As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
 * Responds to user input in 50ms or less on common devices. 
 * Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
-* Authenticated score keepers can record points, assists, and rebounds from active games.
+* Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.
 * Non-authenticated users can view game stats in real time.
 * Non-authenticated users can view previous game's stats.
-* Can show per-player statistics?
-* Authenticated score keepers can edit previous games?
-* Specific charts?
+* Can show per-player statistics 
+* Authenticated score keepers can NOT edit previous games 
+* Specific charts
 >>>>>>> 308d7b6398c4dd9ddbd795f7bbf83d8a7986063b
