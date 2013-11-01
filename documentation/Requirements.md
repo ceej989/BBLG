@@ -20,4 +20,8 @@ Simple clean design that allows users to navigate quickly and easily on screens 
 * Can show per-player statistics 
 * Authenticated score keepers can NOT edit previous games 
 * Specific charts
+** Team Standings
+*** Sort by Stats
+** Player Standings
+*** Sort by Stats
 >>>>>>> 308d7b6398c4dd9ddbd795f7bbf83d8a7986063b
