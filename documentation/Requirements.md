@@ -14,5 +14,10 @@ Requirements:
 * Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.
 * Non-authenticated users can view game stats in real time.
 * Non-authenticated users can view previous game's stats.
-* Can show per-player statistics 
+* Can show per-player statistics.
 * Previously submitted/finished games can not be edited.
+* Previous games can not be edited by any user.
+* Any user can view overall team standings.
+* Any user can sort teams by arbitrary numeric stats.
+* Any user can view individual and overall player standings.
+* Any user can sort players by arbitrary numeric stats.
