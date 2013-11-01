@@ -11,7 +11,7 @@ As platform agnostic as possible (I.E. works on Android, IOS, Windows Phone, Lin
 Quickly store and retrieve data ("feels" fast to the user).
 Simple clean design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
 =======
-* As platform agnostic as possible: Accessible on Android, iOS, and Windows Mobile devices.
+* As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
 * Responds to user input in 50ms or less on common devices. 
 * Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
 * Authenticated score keepers can record points, assists, and rebounds from active games.
