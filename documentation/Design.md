@@ -5,10 +5,13 @@ The purpose of this mobile site is to create a way for semi-organized basketball
 How requirements will be met
 -----------------------------
 * As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
-  * We will utilize web technologies that all platforms are capable of using. We will try and create it via Ruby on Rails
+  * We will utilize web technologies that all platforms are capable of using. Thus the subset of javascript, HTML, and CSS compatable on the listed platforms will be used.
 * Responds to user input in 50ms or less on common devices. 
-  * This is all about appearances. utilizing client side caching and making sure requests are queued up properly will be key 
+  *  As web latency can not be guranteed to be sub 50ms at all times, the application will make side of client-side caching and updating to provide user feedback in less than 50ms. This time is generally accepted as attainable with common practice of client-side javasript. 
 * Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
+    * Simple design will be achieved with a "low-chrome" and "flat UI" approach as has been adopted by Microsoft's recent desktop and mobile operating systems, iOS version 7, and other examples of current practice in the design space. The project designer is versed in such styles and will prototype the design as needed to acheive simplicity before the product is finished.
+* User authentication based on a database of user accounts that we will have stored in our site.
+    * Rails has a wealth of common user-authentication libraries that support standard password + account authentication. A particular authentication library has not been selected at this time.
   * I strongly encourage using very simple, chrome-less UI, akin to the design standards that Microsoft and many others have adopted in the mobile landscape.  Content must shine.  We can use Photoshop to prototype the design.
 * Authenticated league/tournament managers
   * User authentication based on a database of user accounts that we will have stored in our site. There will be at launch 3 types of clients:
