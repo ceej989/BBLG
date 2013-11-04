@@ -11,11 +11,14 @@ How requirements will be met
 * Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
   * I strongly encourage using very simple, chrome-less UI, akin to the design standards that Microsoft and many others have adopted in the mobile landscape.  Content must shine.  We can use Photoshop to prototype the design.
 * Authenticated league/tournament managers
-  * User authentication based on a database of user accounts that we will have stored in our site
+  * User authentication based on a database of user accounts that we will have stored in our site. There will be at launch 3 types of clients:
+    * League Managers: manages a single league and it's scorekeepers/stats
+    * Score Keeper: created by league manager and manages scores for live games
+    * Viewers: can see live game stats as well as historical stats
 * League/tournament managers would create teams and assign players to team rosters
   * Based on authenticated users and their privs, they can create and manage teams accordingly
 * Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.
-  * This is a tricky one as I would like to create user accounts for scorekeepers but what if the scorekeepers rotate? is that ok for league managers to just create X scorekeeper accounts and allow accounts to only be used once per device? 
+  * League managers to create X scorekeeper accounts and allow accounts to only be used once per device. This is not set in stone and it may change as we progress in the project 
 * Any user can view game stats in real time.
   * unauthenticated users will just see a read-only version of the current scores and any other stats
 * Any user can view previous game's stats.
@@ -23,7 +26,7 @@ How requirements will be met
 * Can show per-player statistics.
   * Plan on creating views of the database data.  This one will extract player data and display it to the end-user
 * Previously submitted/finished games can not be edited.
-  
+
 * Previous games can not be edited by any user.
 * Any user can view overall team standings.
 * Any user can sort teams by arbitrary numeric stats.
