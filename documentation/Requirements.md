@@ -11,9 +11,11 @@ Requirements:
 * As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
 * Responds to user input in 50ms or less on common devices. 
 * Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
+* Authenticated league/tournament managers
+* League/tournament managers would create teams and assign players to team rosters
 * Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.
-* Non-authenticated users can view game stats in real time.
-* Non-authenticated users can view previous game's stats.
+* Any user can view game stats in real time.
+* Any user can view previous game's stats.
 * Can show per-player statistics.
 * Previously submitted/finished games can not be edited.
 * Previous games can not be edited by any user.
