@@ -18,7 +18,18 @@ How requirements will be met
         * Total Teams (16 is max)
         * Max players per team (15 max for each team 5v5, 10 max for 4v4, 6 for 3v3)
         * Adding players
-    * Score Keeper: created by league manager and manages scores for live games
+        * Foul counter (how many fouls a team can have before free throws)
+    * Score Keeper: created by league manager and manages stats for live games
+      * Can record the following:
+        * Points
+        * Rebounds
+        * Assists
+        * Fouls (NOTE: IF TOTAL TEAM FOULS reaches League Manager limit, notification to scorekeepers that opposing team now gets to shoot free throws)
+        * Turnovers
+        * Steals
+        * Blocks
+        * Free Throws Made
+        * Free Throws Attempted
     * Viewers: can see live game stats as well as historical stats
 * League/tournament managers would create teams and assign players to team rosters
   * Based on authenticated users and their privs, they can create and manage teams accordingly
@@ -26,6 +37,7 @@ How requirements will be met
   * League managers to create X scorekeeper accounts and allow accounts to only be used once per device. This is not set in stone and it may change as we progress in the project 
 * Any user can view game stats in real time.
   * unauthenticated users will just see a read-only version of the current scores and any other stats
+  * as stats are entered, there can be a play by play output to the view (ex: Player 1 on Team A scores 2 points, Score Keeper tallies the points, 'play-by-play mode' displays "TEAM A: Player 1 scores 2 points")
 * Any user can view previous game's stats.
   * Same as above
 * Can show per-player statistics.
