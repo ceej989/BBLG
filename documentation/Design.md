@@ -1,57 +1,47 @@
-PURPOSE
-=======
+## Project Purpose
+
 The purpose of this mobile site is to create a way for semi-organized basketball tournaments/leagues/events can allow people to effectively track player and team stats. This idea came about as I was at a local basketball tournament and everyone was using a very basic google spreadsheet and the score keepers weren't able to track stats in an efficient manner (they had to rummage through the spreadsheet to find the stats). Also, they were using laptops that had poor wireless connections so updating was a challenge. If the stat trackers could have used their phone's (being as all of them did have smartphones) browser to access a site that could track teams and player stats, I believe tracking would've been much more reliable and accurate.
 
-How requirements will be met
------------------------------
-* As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
-  * We will utilize web technologies that all platforms are capable of using. Thus the subset of javascript, HTML, and CSS compatable on the listed platforms will be used.
-* Responds to user input in 50ms or less on common devices. 
-  *  As web latency can not be guranteed to be sub 50ms at all times, the application will make side of client-side caching and updating to provide user feedback in less than 50ms. This time is generally accepted as attainable with common practice of client-side javasript. 
-* Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
-    * Simple design will be achieved with a "low-chrome" and "flat UI" approach as has been adopted by Microsoft's recent desktop and mobile operating systems, iOS version 7, and other examples of current practice in the design space. The project designer is versed in such styles and will prototype the design as needed to acheive simplicity before the product is finished.
-* User authentication based on a database of user accounts that we will have stored in our site.
-    * Rails has a wealth of common user-authentication libraries that support standard password + account authentication. A particular authentication library has not been selected at this time.
-  * I strongly encourage using very simple, chrome-less UI, akin to the design standards that Microsoft and many others have adopted in the mobile landscape.  Content must shine.  We can use Photoshop to prototype the design.
-* Authenticated league/tournament managers
-  * User authentication based on a database of user accounts that we will have stored in our site. There will be at launch 3 types of clients:
-    * League Managers: creates/manages a single league and it's scorekeepers/stats
-      * Creation of the league includes:
-        * Team size (3v3 4v4 5v5)
-        * Total Teams (16 is max)
-        * Max players per team (15 max for each team 5v5, 10 max for 4v4, 6 for 3v3)
-        * Adding players
-        * Foul counter (how many fouls a team can have before free throws)
-    * Score Keeper: created by league manager and manages stats for live games
-      * Can record the following:
-        * Points
-        * Rebounds
-        * Assists
-        * Fouls (NOTE: IF TOTAL TEAM FOULS reaches League Manager limit, notification to scorekeepers that opposing team now gets to shoot free throws)
-        * Turnovers
-        * Steals
-        * Blocks
-        * Free Throws Made
-        * Free Throws Attempted
-    * Viewers: can see live game stats as well as historical stats
-* League/tournament managers would create teams and assign players to team rosters
-  * Based on authenticated users and their privs, they can create and manage teams accordingly
-* Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.
-  * League managers to create X scorekeeper accounts and allow accounts to only be used once per device. This is not set in stone and it may change as we progress in the project 
-* Any user can view game stats in real time.
-  * unauthenticated users will just see a read-only version of the current scores and any other stats
-  * as stats are entered, there can be a play by play output to the view (ex: Player 1 on Team A scores 2 points, Score Keeper tallies the points, 'play-by-play mode' displays "TEAM A: Player 1 scores 2 points")
-* Any user can view previous game's stats.
-  * Same as above
-* Can show per-player statistics.
-  * Plan on creating views of the database data.  This one will extract player data and display it to the end-user
-* Previously submitted/finished games can not be edited.
+### How Requirements Will be Met
 
+#### As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
+We will utilize web technologies that all the desired platforms are capable of using. Thus the subset of javascript, HTML, and CSS compatable on the listed platforms' browsers will be used. This front end feature set will be based on the [foundation HTML toolkit](http://foundation.zurb.com/).
+
+#### Responds to user input in 50ms or less on common devices. 
+As web latency can not be guranteed to be sub 50ms at all times, the application will make side of client-side caching and updating to provide user feedback in less than 50ms. This response speed is generally easily attainable with client-side javasript. The framework employed for this interactivity, speed, and background AJAX will be [angularjs](http://angularjs.org/).
+
+#### Simple design that allows users to navigate quickly and easily on screens ranging from 3.5" to 10". 
+Simple design will be achieved with a "low-chrome" and "flat UI" approach as has been adopted by Microsoft's recent desktop and mobile operating systems, iOS version 7, and other examples of current practice in the design space. The project designer is versed in such styles and will prototype the design as needed to acheive simplicity before the product is finished. In addition the foundation HTML toolkit provides some layouts which will make this design goal straightforward.
+
+### User Authentication & Account types.
+Authenticating users and determining user priviliges based on account category are very well known web application challenges. Web frameworks in virtually every language include re-usable user authentication toolkits. This project will XXX (need to decide framework between revel, rails, sinatra or other)!!
+User authentication wll be based based on the common model of server-side database of user accounts, as mediated by the chosen framework. Appropriate security will be achieved by only storing salted password hashes using bcrypt or equivalent hash protocol. Available user actions will be based on the authenticated account type, including a standard "admin panel" view for _league managers_.
+
+* League managers can create teams and assign players to team rosters.
+  * Based on authenticated users and their privs, they can create and manage teams accordingly
+  * League managers to create X scorekeeper accounts and allow accounts to only be used once per device. This is a fluid requirement, and may change as the project progresses.
+* unauthenticated users will just see a read-only version of the current scores and any other stats.
+
+
+
+### Universal viewing
+The web application will include a number of view-only pages with no authentication, thus enabling the viewing of historic and current statistics by all interested parties. This will support all of the following requirements.
+
+* Any user can view game stats in real time.
 * Previous games can not be edited by any user.
 * Any user can view overall team standings.
 * Any user can sort teams by arbitrary numeric stats.
 * Any user can view individual and overall player standings.
 * Any user can sort players by arbitrary numeric stats.
+
+* Can show per-player statistics.
+
+Similar to for the "activity feed" a player will have a unique URL endpoint which will provide their statistics, as listed in the requirements document, in HTML and JSON formats.
+The specific visual design of the displays is TBD, but can take advantage of various javascript or SVG visualization techniques.
+
+### Activity feed
+Each game and player will have an activity feed published in at least JSON and HTML, and identified by a unique URL. Including an RSS version of the feed is a possible, but not required addition.
+
 
 
 Assumptions
