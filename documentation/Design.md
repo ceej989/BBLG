@@ -15,8 +15,9 @@ How requirements will be met
     * League Managers: creates/manages a single league and it's scorekeepers/stats
       * Creation of the league includes:
         * Team size (3v3 4v4 5v5)
-        * Total Teams
-        * Max players per team
+        * Total Teams (16 is max)
+        * Max players per team (15 max for each team 5v5, 10 max for 4v4, 6 for 3v3)
+        * Adding players
     * Score Keeper: created by league manager and manages scores for live games
     * Viewers: can see live game stats as well as historical stats
 * League/tournament managers would create teams and assign players to team rosters
