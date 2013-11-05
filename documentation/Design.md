@@ -12,7 +12,11 @@ How requirements will be met
   * I strongly encourage using very simple, chrome-less UI, akin to the design standards that Microsoft and many others have adopted in the mobile landscape.  Content must shine.  We can use Photoshop to prototype the design.
 * Authenticated league/tournament managers
   * User authentication based on a database of user accounts that we will have stored in our site. There will be at launch 3 types of clients:
-    * League Managers: manages a single league and it's scorekeepers/stats
+    * League Managers: creates/manages a single league and it's scorekeepers/stats
+      * Creation of the league includes:
+        * Team size (3v3 4v4 5v5)
+        * Total Teams
+        * Max players per team
     * Score Keeper: created by league manager and manages scores for live games
     * Viewers: can see live game stats as well as historical stats
 * League/tournament managers would create teams and assign players to team rosters
