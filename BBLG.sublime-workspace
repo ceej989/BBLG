@@ -156,13 +156,18 @@
 	"buffers":
 	[
 		{
-			"contents": "### Basketball League Tracker Website\n\n## Purpose:  \n\nTo create a website that allows users to track basketball game stats via a mobile site.  It will be twofold in that:\n1. Score keepers can easily track stats of games that are currently going on.\n2. Viewers can check previous games as well as games in real-time.\n\nRequirements:\n\n* As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.\n* Responds to user input in 50ms or less on common devices. \n* Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10\". \n* Authenticated league/tournament managers\n* Authenticated score keepers can record points, assists, rebounds, fouls, or ANY OTHER stat they want from active games.\n* Any user can view game stats in real time.\n* Any user can view previous game's stats.\n* Can show per-player statistics.\n* Previously submitted/finished games can not be edited.\n* Previous games can not be edited by any user.\n* Any user can view overall team standings.\n* Any user can sort teams by arbitrary numeric stats.\n* Any user can view individual and overall player standings.\n* Any user can sort players by arbitrary numeric stats.",
 			"file": "documentation/Requirements.md",
-			"file_size": 1204,
-			"file_write_time": 130278119398344977,
 			"settings":
 			{
-				"buffer_size": 1193,
+				"buffer_size": 1276,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "documentation/Design.md",
+			"settings":
+			{
+				"buffer_size": 4009,
 				"line_ending": "Windows"
 			}
 		}
@@ -203,8 +208,8 @@
 	},
 	"file_history":
 	[
-		"/C/Windows/System32/drivers/etc/hosts",
 		"/D/github/BBLG/documentation/Design.md",
+		"/C/Windows/System32/drivers/etc/hosts",
 		"/D/github/BBLG/documentation/Requirements.md",
 		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/table.js",
 		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Control_ProjectTask.html",
@@ -363,7 +368,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -371,15 +376,15 @@
 					"file": "documentation/Requirements.md",
 					"settings":
 					{
-						"buffer_size": 1193,
+						"buffer_size": 1276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								629,
-								629
+								1061,
+								1061
 							]
 						],
 						"settings":
@@ -388,6 +393,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "documentation/Design.md",
+					"settings":
+					{
+						"buffer_size": 4009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2431,
+								2431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1190.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
