@@ -1,0 +1,25 @@
+.well{"ng-app" => "chat", "ng-controller" => "Chat"}
+  %form.form-inline
+    %input{label: "Your name:", type: "text", "ng-model" => "username"}/
+  %div{"ng-repeat" => "message in messages", "ng-cloak" => true}
+    <em>{{message.from}}: {{message.content}}</em>
+    %br
+  %form.form-inline{"ng-submit" => "addMessage()"}
+    %input{"type" => "text", "ng-model" => "message", "placeholder" => "Message..."}
+    %button.btn{type: "submit"}
+      %i.icon-reply Send
+%script{src: "//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"}
+%script{src: "//cdn.firebase.com/v0/firebase.js"}
+%script{src: "//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"}
+:javascript
+   angular.module('chat', ['firebase']).controller('Chat', ['$scope', 'angularFire',
+   function($scope, angularFire) {
+   var ref = new Firebase('https://angularfire.firebaseio.com/chat');
+   angularFire(ref.limit(15), $scope, "messages");
+   $scope.username = 'Guest' + Math.floor(Math.random()*101);
+   $scope.addMessage = function() {
+     $scope.messages[ref.push().name()] = {
+       from: $scope.username, content: $scope.message
+     };
+     $scope.message = "";
+   }}]);
