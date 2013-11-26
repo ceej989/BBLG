@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"C",
+				"CurrentItem"
+			],
+			[
+				"retu",
+				"returnHtml"
+			],
+			[
 				"projec",
 				"projectURL"
 			],
@@ -156,18 +164,120 @@
 	"buffers":
 	[
 		{
-			"file": "documentation/Requirements.md",
+			"file": "documentation/Design.md",
 			"settings":
 			{
-				"buffer_size": 1276,
+				"buffer_size": 4548,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "documentation/Design.md",
+			"file": "documentation/Glossary.md",
 			"settings":
 			{
-				"buffer_size": 4009,
+				"buffer_size": 3256,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<script language = \"javascript\">\nconsole.log(\"TEST\");\n\n$(document).ready(function(){\n\n	var today = new Date();\n	var dd = today.getDate();\n	var mm = today.getMonth()+1; \n	var yyyy = today.getFullYear();\n\n	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = yyyy+'-'+mm+'-'+dd;\n\n	var todayUS = today;\n	var d = todayUS.substring(8,10);\n	var m = todayUS.substring(5,7); \n	var y = todayUS.substring(0,4);\n\n	todayUS = m + \"/\" + d + \"y\";\n\nconsole.log(todayUS);\nvar strHtml = \"\";\nstrHtml += \"<table class=foome border =1 unselectable=off> <tr> <th class='footable-first-column footable-sortable'> Project Title </th>\";\nstrHtml += \"<th class=footable-sortable> Tasks Completed </th>\";\nstrHtml += \"<th class=footable-sortable> Tasks In Progress </th>\";\nstrHtml += \"<th class=footable-sortable> Tasks Not Started </th>\";\nstrHtml += \"<th class='footable-last-column footable-sortable'> Next Task Due </th> </tr>\";\nconsole.log(strHtml);\n$(\".cbq-layout-main > ul.dfwp-list > li.dfwp-item\").each(function(){\n	var notStarted = 0;\n	var completed = 0;\n	var inProgress = 0;\n	var currDate = '';\n	var itemName = $(this).find(\".project-title\").first().text();\n	var projectURL = $(this).find(\".project-url\").first().text();\n	//loop through to find task status and increment counter\n\n	console.log(itemName);\n	$(this).find(\".task\").each(function(){\n		var status = $(this).find(\".task-status\").text();\n		var dueDate = $(this).find(\".task-due-date\").text();\n		var dueDate = dueDate.substring(0,10);\n		\n		console.log(status);\n		console.log(\"current date:\"+currDate);\n		if(status == \"Completed\")\n			completed++;\n		else if (status == \"Not Started\"){\n			notStarted++;\n			if(currDate < dueDate && dueDate)\n				currDate = dueDate;		\n		}					\n		else if (status == \"In Progress\"){\n			inProgress++;\n			if(currDate < dueDate && dueDate)\n				currDate = dueDate;\n		}\n		else\n			console.log(\"no match\");\n	});\n\n	\n	var dd = currDate.substring(8,10);\n	var mm = currDate.substring(5,7); \n	var yy = currDate.substring(0,4);\n	var nextDueDate = mm + \"/\" + dd +\"/\"+yy;\n\n	if( nextDueDate < today && mm != \"\")\n	{\n		nextDueDate = \"<span style=color:red>\" + nextDueDate +\"</span>\";	\n	}\n	else if ( nextDueDate > today){\n		nextDueDate = nextDueDate;\n	}\n	else{\n		nextDueDate = \"N/A\";\n	}	\n\n	strHtml += \"<tr> <td><a href='\"+ projectURL+\"'class='groupheader item medium'>\" + itemName + \"</a></td>\";\n	strHtml += \"<td><div class='completed'>\" + completed + \"</div></td>\";\n	strHtml += \"<td><div class='in-progress'>\" + inProgress + \"</div></td>\";\n	strHtml += \"<td><div class='not-started'>\" + notStarted + \"</div></td>\";\n	strHtml += \"<td><div class='next-due'>\" + nextDueDate + \"</div></td></tr>\";\n	\n});\n	strHtml += \"</table>\";\n	console.log(\"resulting HTML:\" + strHtml);	\n	$(\".cbq-layout-main > ul.dfwp-list\").html(strHtml);	\n\n	\n	\n});\n</script>",
+			"file": "/D/SkyDrive/SharePoint/test.js",
+			"file_size": 2866,
+			"file_write_time": 130287763247142756,
+			"settings":
+			{
+				"buffer_size": 2780,
+				"line_ending": "Windows",
+				"name": "<script language = \"javascript\">"
+			}
+		},
+		{
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Status/Project Status.webpart",
+			"settings":
+			{
+				"buffer_size": 11315,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Status/pstatus.js",
+			"settings":
+			{
+				"buffer_size": 2759,
+				"line_ending": "Windows",
+				"name": "<script language = \"javascript\">"
+			}
+		},
+		{
+			"contents": "https://pipllc.sharepoint.com/_layouts/15/CopyUtil.aspx?Use=id&Action=dispform&ItemId=2&ListId=07C36850-D122-4455-9019-C2957800D583&WebId=2A86C782-B040-417C-BDF9-70778379CC4C&SiteId=4d527544-792e-4455-92c5-5645914bbc01&Source=https%3A%2F%2Fpipllc%2Esharepoint%2Ecom%2Fclients%2Fai%2FSitePages%2FHome%2Easpx\n\nhttps://pipllc.sharepoint.com/clients/ai/123/Lists/ProjectInfo/DispForm.aspx?ID=2&RootFolder=%2Fclients%2Fai%2F123%2FLists%2FProjectInfo&Source=https%3A%2F%2Fpipllc%2Esharepoint%2Ecom%2Fclients%2Fai%2FSitePages%2FHome%2Easpx",
+			"settings":
+			{
+				"buffer_size": 532,
+				"line_ending": "Windows",
+				"name": "https://pipllc.sharepoint.com/_layouts/15/CopyUtil"
+			}
+		},
+		{
+			"contents": "<webParts>\n  <webPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\">\n    <metaData>\n      <type name=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" />\n      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>\n    </metaData>\n    <data>\n      <properties>\n        <property name=\"Filter1ChainingOperator\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterChainingOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Or</property>\n        <property name=\"FilterOperator1\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"Direction\" type=\"direction\">NotSet</property>\n        <property name=\"FilterOperator3\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"GroupByDirection\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+SortDirection, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Desc</property>\n        <property name=\"DataSourceID\" type=\"string\" />\n        <property name=\"ChromeState\" type=\"chromestate\">Normal</property>\n        <property name=\"SystemViewFields\" type=\"string\" />\n        <property name=\"ListName\" type=\"string\" />\n        <property name=\"FilterDisplayValue3\" type=\"string\" />\n        <property name=\"FilterDisplayValue2\" type=\"string\" />\n        <property name=\"FilterDisplayValue1\" type=\"string\" />\n        <property name=\"FilterField1\" type=\"string\" />\n        <property name=\"Description\" type=\"string\">Displays a dynamic view of content from your site.</property>\n        <property name=\"DataColumnRenames\" type=\"string\" />\n        <property name=\"MissingAssembly\" type=\"string\">Cannot import this Web Part.</property>\n        <property name=\"PageSize\" type=\"int\">-1</property>\n        <property name=\"ViewContentTypeId\" type=\"string\" />\n        <property name=\"ParameterBindings\" type=\"string\" null=\"true\" />\n        <property name=\"HelpUrl\" type=\"string\" />\n        <property name=\"AdditionalFilterFields\" type=\"string\" />\n        <property name=\"DataMappingViewFields\" type=\"string\">{b9e6f3ae-5632-4b13-b636-9d1a2bd67120},Computed;{543bc2cf-1f30-488e-8f25-6fe3b689d9ac},Image;{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Text;{691b9a4b-512e-4341-b3f1-68914130d5b2},Text;{c15b34c3-ce7d-490a-b133-3f4de8801b76},Choice;{cd21b4c2-6841-4f9e-a23a-738a65f99889},DateTime;</property>\n        <property name=\"Title\" type=\"string\">PSR</property>\n        <property name=\"FeedDescription\" type=\"string\" />\n        <property name=\"UseCache\" type=\"bool\">True</property>\n        <property name=\"XslLink\" type=\"string\" null=\"true\" />\n        <property name=\"AutoRefresh\" type=\"bool\">False</property>\n        <property name=\"Filter1IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"FireInitialRow\" type=\"bool\">True</property>\n        <property name=\"FilterValue3\" type=\"string\" />\n        <property name=\"SortByFieldType\" type=\"string\">DateTime</property>\n        <property name=\"ManualRefresh\" type=\"bool\">False</property>\n        <property name=\"HelpMode\" type=\"helpmode\">Modeless</property>\n        <property name=\"AllowConnect\" type=\"bool\">True</property>\n        <property name=\"ItemStyle\" type=\"string\">StatusView</property>\n        <property name=\"SampleData\" type=\"string\">&lt;dsQueryResponse&gt;\n                    &lt;Rows&gt;\n                        &lt;Row Title=\"Item 1\" LinkUrl=\"http://Item1\" Group=\"Group Header\" __begincolumn=\"True\" __begingroup=\"True\" /&gt;\n                        &lt;Row Title=\"Item 2\" LinkUrl=\"http://Item2\" __begincolumn=\"False\" __begingroup=\"False\" /&gt;\n                        &lt;Row Title=\"Item 3\" LinkUrl=\"http://Item3\" __begincolumn=\"False\" __begingroup=\"False\" /&gt;\n                    &lt;/Rows&gt;\n                    &lt;/dsQueryResponse&gt;</property>\n        <property name=\"FilterIncludeChildren2\" type=\"bool\">False</property>\n        <property name=\"XmlDefinitionLink\" type=\"string\" />\n        <property name=\"ServerTemplate\" type=\"string\">171</property>\n        <property name=\"TitleUrl\" type=\"string\" />\n        <property name=\"CommonViewFields\" type=\"string\">Status,Text;DueDate,DateTime;</property>\n        <property name=\"QueryOverride\" type=\"string\" />\n        <property name=\"DataSourcesString\" type=\"string\" />\n        <property name=\"DisplayName\" type=\"string\" />\n        <property name=\"ListGuid\" type=\"string\" />\n        <property name=\"DataFields\" type=\"string\" />\n        <property name=\"ShowWithSampleData\" type=\"bool\">False</property>\n        <property name=\"GroupByFieldType\" type=\"string\" />\n        <property name=\"Default\" type=\"string\" />\n        <property name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">None</property>\n        <property name=\"ContentTypeBeginsWithId\" type=\"string\">0x0108</property>\n        <property name=\"AllowHide\" type=\"bool\">True</property>\n        <property name=\"FeedEnabled\" type=\"bool\">False</property>\n        <property name=\"SortBy\" type=\"string\">{8c06beca-0777-48f7-91c7-6da68bc07b69}</property>\n        <property name=\"FilterByContextTerm\" type=\"bool\">False</property>\n        <property name=\"TitleIconImageUrl\" type=\"string\" />\n        <property name=\"PlayMediaInBrowser\" type=\"bool\">True</property>\n        <property name=\"ViewFlag\" type=\"string\">0</property>\n        <property name=\"Xsl\" type=\"string\">&lt;xsl:stylesheet xmlns:x=\"http://www.w3.org/2001/XMLSchema\" version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:cmswrt=\"http://schemas.microsoft.com/WebPart/v3/Publishing/runtime\" exclude-result-prefixes=\"xsl cmswrt x\" &gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/Header.xsl\" /&gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/ItemStyle.xsl\" /&gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/ContentQueryMain.xsl\" /&gt; &lt;/xsl:stylesheet&gt;</property>\n        <property name=\"FilterField2\" type=\"string\" />\n        <property name=\"ChromeType\" type=\"chrometype\">None</property>\n        <property name=\"CacheXslTimeOut\" type=\"int\">86400</property>\n        <property name=\"AdditionalGroupAndSortFields\" type=\"string\" />\n        <property name=\"UseSQLDataSourcePaging\" type=\"bool\">True</property>\n        <property name=\"Height\" type=\"string\" />\n        <property name=\"DataMappings\" type=\"string\">ProjectProperty.Url:|Status:{c15b34c3-ce7d-490a-b133-3f4de8801b76},TaskStatus,Choice;|DueDate:{cd21b4c2-6841-4f9e-a23a-738a65f99889},TaskDueDate,DateTime;|Title:{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Title,Text;|Notes1:|LinkUrl:|Description:{691b9a4b-512e-4341-b3f1-68914130d5b2},ShortComment,Text;|ImageUrl:{b9e6f3ae-5632-4b13-b636-9d1a2bd67120},EncodedAbsThumbnailUrl,Computed;{543bc2cf-1f30-488e-8f25-6fe3b689d9ac},PublishingRollupImage,Image;|ProjectProperty.SiteUrl:|ProjectProperty.Title:|</property>\n        <property name=\"ListUrl\" type=\"string\" null=\"true\" />\n        <property name=\"ShowUntargetedItems\" type=\"bool\">False</property>\n        <property name=\"AllowMinimize\" type=\"bool\">True</property>\n        <property name=\"GroupBy\" type=\"string\">ProjectProperty.Title</property>\n        <property name=\"FilterIncludeChildren1\" type=\"bool\">False</property>\n        <property name=\"BaseType\" type=\"string\" />\n        <property name=\"MainXslLink\" type=\"string\" />\n        <property name=\"AsyncRefresh\" type=\"bool\">False</property>\n        <property name=\"FilterValue1\" type=\"string\" />\n        <property name=\"FilterValue2\" type=\"string\" />\n        <property name=\"InitialAsyncDataFetch\" type=\"bool\">False</property>\n        <property name=\"AutoRefreshInterval\" type=\"int\">60</property>\n        <property name=\"Filter3IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"GroupStyle\" type=\"string\">DefaultHeader</property>\n        <property name=\"AllowZoneChange\" type=\"bool\">True</property>\n        <property name=\"FilterIncludeChildren3\" type=\"bool\">False</property>\n        <property name=\"EnableOriginalValue\" type=\"bool\">False</property>\n        <property name=\"ItemLimit\" type=\"int\">-1</property>\n        <property name=\"FilterType1\" type=\"string\" />\n        <property name=\"UseCopyUtil\" type=\"bool\">True</property>\n        <property name=\"FilterType3\" type=\"string\" />\n        <property name=\"FilterType2\" type=\"string\" />\n        <property name=\"FilterOperator2\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">PAGE_NORMALVIEW</property>\n        <property name=\"FilterByAudience\" type=\"bool\">False</property>\n        <property name=\"ItemXslLink\" type=\"string\" />\n        <property name=\"Hidden\" type=\"bool\">False</property>\n        <property name=\"WebUrl\" type=\"string\">~sitecollection/pec</property>\n        <property name=\"HeaderXslLink\" type=\"string\" />\n        <property name=\"CacheXslStorage\" type=\"bool\">True</property>\n        <property name=\"ListsOverride\" type=\"string\" />\n        <property name=\"SortByDirection\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+SortDirection, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Desc</property>\n        <property name=\"Filter2IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"AllowEdit\" type=\"bool\">True</property>\n        <property name=\"FeedTitle\" type=\"string\" />\n        <property name=\"FilterField3\" type=\"string\" />\n        <property name=\"MediaPlayerStyleSource\" type=\"string\" null=\"true\" />\n        <property name=\"DisplayColumns\" type=\"int\">1</property>\n        <property name=\"Filter2ChainingOperator\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterChainingOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Or</property>\n        <property name=\"XmlDefinition\" type=\"string\" />\n        <property name=\"WebsOverride\" type=\"string\" />\n        <property name=\"AllowClose\" type=\"bool\">True</property>\n        <property name=\"ContentTypeName\" type=\"string\" />\n        <property name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\">00000000-0000-0000-0000-000000000000</property>\n        <property name=\"ExportMode\" type=\"exportmode\">All</property>\n        <property name=\"NoDefaultStyle\" type=\"string\" null=\"true\" />\n        <property name=\"ViewFieldsOverride\" type=\"string\" />\n        <property name=\"CatalogIconImageUrl\" type=\"string\" />\n        <property name=\"ListDisplayName\" type=\"string\" null=\"true\" />\n        <property name=\"Width\" type=\"string\" />\n      </properties>\n    </data>\n  </webPart>\n</webParts>\n\n\n",
+			"file": "/D/downloads/PSR.webpart",
+			"file_size": 11574,
+			"file_write_time": 130287766139665124,
+			"settings":
+			{
+				"buffer_size": 11441,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/JS Display Templates/PE_ClientInfo.js",
+			"settings":
+			{
+				"buffer_size": 825,
+				"line_ending": "Windows",
+				"name": "var mjhViews = mjhViews || {};"
+			}
+		},
+		{
+			"contents": "<a href=\"/st/t_pe/_layouts/15/newsbweb.aspx\"><img src=\"/SiteAssets/images/button_proj.png\" alt=\"\" style=\"margin: 5px;\"/></a>",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Windows",
+				"name": "<a href=\"/st/t_pe/_layouts/15/newsbweb.aspx\"><img"
+			}
+		},
+		{
+			"contents": "<webParts>\n  <webPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\">\n    <metaData>\n      <type name=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" />\n      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>\n    </metaData>\n    <data>\n      <properties>\n        <property name=\"Filter1ChainingOperator\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterChainingOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Or</property>\n        <property name=\"FilterOperator1\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"Direction\" type=\"direction\">NotSet</property>\n        <property name=\"FilterOperator3\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"GroupByDirection\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+SortDirection, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Asc</property>\n        <property name=\"DataSourceID\" type=\"string\" />\n        <property name=\"ChromeState\" type=\"chromestate\">Normal</property>\n        <property name=\"SystemViewFields\" type=\"string\" />\n        <property name=\"ListName\" type=\"string\" />\n        <property name=\"FilterDisplayValue3\" type=\"string\" />\n        <property name=\"FilterDisplayValue2\" type=\"string\" />\n        <property name=\"FilterDisplayValue1\" type=\"string\" />\n        <property name=\"FilterField1\" type=\"string\" />\n        <property name=\"Description\" type=\"string\">Displays a dynamic view of content from your site.</property>\n        <property name=\"DataColumnRenames\" type=\"string\" />\n        <property name=\"MissingAssembly\" type=\"string\">Cannot import this Web Part.</property>\n        <property name=\"PageSize\" type=\"int\">-1</property>\n        <property name=\"ViewContentTypeId\" type=\"string\" />\n        <property name=\"ParameterBindings\" type=\"string\" > \n        <ParameterBinding Name=\"url_PATH_INFO\" Location=\"ServerVariable(PATH_INFO)\" DefaultValue=\"\"/> \n        <ParameterBinding Name=\"url_HTTP_HOST\" Location=\"ServerVariable(HTTP_HOST)\" DefaultValue=\"\"/>\n        </property>\n        <property name=\"HelpUrl\" type=\"string\" />\n        <property name=\"AdditionalFilterFields\" type=\"string\" />\n        <property name=\"DataMappingViewFields\" type=\"string\">{b9e6f3ae-5632-4b13-b636-9d1a2bd67120},Computed;{543bc2cf-1f30-488e-8f25-6fe3b689d9ac},Image;{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Text;{691b9a4b-512e-4341-b3f1-68914130d5b2},Text;</property>\n        <property name=\"Title\" type=\"string\">Projects</property>\n        <property name=\"FeedDescription\" type=\"string\" />\n        <property name=\"UseCache\" type=\"bool\">True</property>\n        <property name=\"XslLink\" type=\"string\" null=\"true\" />\n        <property name=\"AutoRefresh\" type=\"bool\">False</property>\n        <property name=\"Filter1IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"FireInitialRow\" type=\"bool\">True</property>\n        <property name=\"FilterValue3\" type=\"string\" />\n        <property name=\"SortByFieldType\" type=\"string\">DateTime</property>\n        <property name=\"ManualRefresh\" type=\"bool\">False</property>\n        <property name=\"HelpMode\" type=\"helpmode\">Modeless</property>\n        <property name=\"AllowConnect\" type=\"bool\">True</property>\n        <property name=\"ItemStyle\" type=\"string\">Default</property>\n        <property name=\"SampleData\" type=\"string\">&lt;dsQueryResponse&gt;\n                    &lt;Rows&gt;\n                        &lt;Row Title=\"Item 1\" LinkUrl=\"http://Item1\" Group=\"Group Header\" __begincolumn=\"True\" __begingroup=\"True\" /&gt;\n                        &lt;Row Title=\"Item 2\" LinkUrl=\"http://Item2\" __begincolumn=\"False\" __begingroup=\"False\" /&gt;\n                        &lt;Row Title=\"Item 3\" LinkUrl=\"http://Item3\" __begincolumn=\"False\" __begingroup=\"False\" /&gt;\n                    &lt;/Rows&gt;\n                    &lt;/dsQueryResponse&gt;</property>\n        <property name=\"FilterIncludeChildren2\" type=\"bool\">False</property>\n        <property name=\"XmlDefinitionLink\" type=\"string\" />\n        <property name=\"ServerTemplate\" type=\"string\">100</property>\n        <property name=\"TitleUrl\" type=\"string\" />\n        <property name=\"CommonViewFields\" type=\"string\"> WorkAddress, RichHTML; WorkCity, Text; WorkState, Text; CompanyNumber, Text; TranslationStateWebId, Text</property>\n        <property name=\"QueryOverride\" type=\"string\" />\n        <property name=\"DataSourcesString\" type=\"string\" />\n        <property name=\"DisplayName\" type=\"string\" />\n        <property name=\"ListGuid\" type=\"string\" />\n        <property name=\"DataFields\" type=\"string\" />\n        <property name=\"ShowWithSampleData\" type=\"bool\">False</property>\n        <property name=\"GroupByFieldType\" type=\"string\" />\n        <property name=\"Default\" type=\"string\" />\n        <property name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">None</property>\n        <property name=\"ContentTypeBeginsWithId\" type=\"string\">0x01003AD2F1BED1BAC0408179B276A3ADDD8901</property>\n        <property name=\"AllowHide\" type=\"bool\">True</property>\n        <property name=\"FeedEnabled\" type=\"bool\">False</property>\n        <property name=\"SortBy\" type=\"string\">{8c06beca-0777-48f7-91c7-6da68bc07b69}</property>\n        <property name=\"FilterByContextTerm\" type=\"bool\">False</property>\n        <property name=\"TitleIconImageUrl\" type=\"string\" />\n        <property name=\"PlayMediaInBrowser\" type=\"bool\">True</property>\n        <property name=\"ViewFlag\" type=\"string\">0</property>\n        <property name=\"Xsl\" type=\"string\">&lt;xsl:stylesheet xmlns:x=\"http://www.w3.org/2001/XMLSchema\" version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:cmswrt=\"http://schemas.microsoft.com/WebPart/v3/Publishing/runtime\" exclude-result-prefixes=\"xsl cmswrt x\" &gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/Header.xsl\" /&gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/ItemStyle.xsl\" /&gt; &lt;xsl:import href=\"/Style Library/XSL Style Sheets/ContentQueryMain.xsl\" /&gt; &lt;/xsl:stylesheet&gt;</property>\n        <property name=\"FilterField2\" type=\"string\" />\n        <property name=\"ChromeType\" type=\"chrometype\">TitleOnly</property>\n        <property name=\"CacheXslTimeOut\" type=\"int\">86400</property>\n        <property name=\"AdditionalGroupAndSortFields\" type=\"string\" />\n        <property name=\"UseSQLDataSourcePaging\" type=\"bool\">True</property>\n        <property name=\"Height\" type=\"string\" />\n        <property name=\"DataMappings\" type=\"string\">ProjectProperty.Url:|Status:|DueDate:|Title:{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Title,Text;|ProjectProperty.Title:|LinkUrl:|Description:{691b9a4b-512e-4341-b3f1-68914130d5b2},ShortComment,Text;|ImageUrl:{b9e6f3ae-5632-4b13-b636-9d1a2bd67120},EncodedAbsThumbnailUrl,Computed;{543bc2cf-1f30-488e-8f25-6fe3b689d9ac},PublishingRollupImage,Image;|ProjectProperty.SiteUrl:|</property>\n        <property name=\"ListUrl\" type=\"string\" null=\"true\" />\n        <property name=\"ShowUntargetedItems\" type=\"bool\">False</property>\n        <property name=\"AllowMinimize\" type=\"bool\">True</property>\n        <property name=\"GroupBy\" type=\"string\">ProjectProperty.Title</property>\n        <property name=\"FilterIncludeChildren1\" type=\"bool\">False</property>\n        <property name=\"BaseType\" type=\"string\" />\n        <property name=\"MainXslLink\" type=\"string\" />\n        <property name=\"AsyncRefresh\" type=\"bool\">False</property>\n        <property name=\"FilterValue1\" type=\"string\" />\n        <property name=\"FilterValue2\" type=\"string\" />\n        <property name=\"InitialAsyncDataFetch\" type=\"bool\">False</property>\n        <property name=\"AutoRefreshInterval\" type=\"int\">60</property>\n        <property name=\"Filter3IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"GroupStyle\" type=\"string\">DefaultHeader</property>\n        <property name=\"AllowZoneChange\" type=\"bool\">True</property>\n        <property name=\"FilterIncludeChildren3\" type=\"bool\">False</property>\n        <property name=\"EnableOriginalValue\" type=\"bool\">False</property>\n        <property name=\"ItemLimit\" type=\"int\">15</property>\n        <property name=\"FilterType1\" type=\"string\" />\n        <property name=\"UseCopyUtil\" type=\"bool\">True</property>\n        <property name=\"FilterType3\" type=\"string\" />\n        <property name=\"FilterType2\" type=\"string\" />\n        <property name=\"FilterOperator2\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterFieldQueryOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Eq</property>\n        <property name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">PAGE_NORMALVIEW</property>\n        <property name=\"FilterByAudience\" type=\"bool\">False</property>\n        <property name=\"ItemXslLink\" type=\"string\" />\n        <property name=\"Hidden\" type=\"bool\">False</property>\n        <property name=\"WebUrl\" type=\"string\">~sitecollection/clients</property>\n        <property name=\"HeaderXslLink\" type=\"string\" />\n        <property name=\"CacheXslStorage\" type=\"bool\">True</property>\n        <property name=\"ListsOverride\" type=\"string\" />\n        <property name=\"SortByDirection\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+SortDirection, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Desc</property>\n        <property name=\"Filter2IsCustomValue\" type=\"bool\">False</property>\n        <property name=\"AllowEdit\" type=\"bool\">True</property>\n        <property name=\"FeedTitle\" type=\"string\" />\n        <property name=\"FilterField3\" type=\"string\" />\n        <property name=\"MediaPlayerStyleSource\" type=\"string\" null=\"true\" />\n        <property name=\"DisplayColumns\" type=\"int\">1</property>\n        <property name=\"Filter2ChainingOperator\" type=\"Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart+FilterChainingOperator, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\">Or</property>\n        <property name=\"XmlDefinition\" type=\"string\" />\n        <property name=\"WebsOverride\" type=\"string\" />\n        <property name=\"AllowClose\" type=\"bool\">True</property>\n        <property name=\"ContentTypeName\" type=\"string\" />\n        <property name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\">00000000-0000-0000-0000-000000000000</property>\n        <property name=\"ExportMode\" type=\"exportmode\">All</property>\n        <property name=\"NoDefaultStyle\" type=\"string\" />\n        <property name=\"ViewFieldsOverride\" type=\"string\" />\n        <property name=\"CatalogIconImageUrl\" type=\"string\" />\n        <property name=\"ListDisplayName\" type=\"string\" null=\"true\" />\n        <property name=\"Width\" type=\"string\" />\n      </properties>\n    </data>\n  </webPart>\n</webParts>",
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP- Project Sites/Projects.webpart",
+			"file_size": 11653,
+			"file_write_time": 130293930289868660,
+			"settings":
+			{
+				"buffer_size": 11540,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP- Project Sites/Header.xsl",
+			"settings":
+			{
+				"buffer_size": 3256,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Chris/Downloads/ItemStyle.xsl",
+			"settings":
+			{
+				"buffer_size": 34911,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SkyDrive/SharePoint/PIP LLC/JS Display Templates/PoCo_Info.js",
+			"settings":
+			{
+				"buffer_size": 854,
 				"line_ending": "Windows"
 			}
 		}
@@ -208,10 +318,11 @@
 	},
 	"file_history":
 	[
+		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/table.js",
+		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/jquery-1.9.1.min.js",
+		"/D/github/BBLG/documentation/Requirements.md",
 		"/D/github/BBLG/documentation/Design.md",
 		"/C/Windows/System32/drivers/etc/hosts",
-		"/D/github/BBLG/documentation/Requirements.md",
-		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/table.js",
 		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Control_ProjectTask.html",
 		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Item_ProjectTask.html",
 		"/D/SkyDrive/SharePoint/PIP LLC/Assets/global.css",
@@ -313,6 +424,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"project",
+			"para",
+			"h2",
+			"Project",
 			"Projec",
 			"Due",
 			"	var today = new Date();\n	var dd = today.getDate();\n	var mm = today.getMonth()+1; //January is 0!\n	var yyyy = today.getFullYear();\n\n	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = yyyy+'-'+mm+'-'+dd;\n\n	var todayUS = today;\n	var d = todayUS.substring(8,10);\n	var m = todayUS.substring(5,7); \n	var y = todayUS.substring(0,4);\n\n	todayUS = m + \"/\" + d + \"y\";",
@@ -351,6 +466,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"h3",
 			"wil-file",
 			"10.100.4.60",
 			"wil-file",
@@ -368,49 +484,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "documentation/Requirements.md",
-					"settings":
-					{
-						"buffer_size": 1276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1061,
-								1061
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "documentation/Design.md",
 					"settings":
 					{
-						"buffer_size": 4009,
+						"buffer_size": 4548,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2431,
-								2431
+								1603,
+								1603
 							]
 						],
 						"settings":
@@ -420,7 +510,338 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1190.0,
+						"translation.y": 107.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "documentation/Glossary.md",
+					"settings":
+					{
+						"buffer_size": 3256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3256,
+								3256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/SkyDrive/SharePoint/test.js",
+					"settings":
+					{
+						"buffer_size": 2780,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2764,
+								2764
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<script language = \"javascript\">",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Status/Project Status.webpart",
+					"settings":
+					{
+						"buffer_size": 11315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4283,
+								4283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Status/pstatus.js",
+					"settings":
+					{
+						"buffer_size": 2759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2759
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<script language = \"javascript\">",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"settings":
+					{
+						"buffer_size": 532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								532,
+								308
+							]
+						],
+						"settings":
+						{
+							"auto_name": "https://pipllc.sharepoint.com/_layouts/15/CopyUtil",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/downloads/PSR.webpart",
+					"settings":
+					{
+						"buffer_size": 11441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7622,
+								7629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1634.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/JS Display Templates/PE_ClientInfo.js",
+					"settings":
+					{
+						"buffer_size": 825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var mjhViews = mjhViews || {};",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								124
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<a href=\"/st/t_pe/_layouts/15/newsbweb.aspx\"><img",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP- Project Sites/Projects.webpart",
+					"settings":
+					{
+						"buffer_size": 11540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6721,
+								6721
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/CQWP- Project Sites/Header.xsl",
+					"settings":
+					{
+						"buffer_size": 3256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3236,
+								2530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XSL.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/Chris/Downloads/ItemStyle.xsl",
+					"settings":
+					{
+						"buffer_size": 34911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32647,
+								34890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XSL.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 14228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/D/SkyDrive/SharePoint/PIP LLC/JS Display Templates/PoCo_Info.js",
+					"settings":
+					{
+						"buffer_size": 854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 18.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
