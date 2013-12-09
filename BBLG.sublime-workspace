@@ -1,0 +1,460 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"projec",
+				"projectURL"
+			],
+			[
+				"net",
+				"nextDueDate"
+			],
+			[
+				"next",
+				"nextDueDate"
+			],
+			[
+				"toda",
+				"todayUS"
+			],
+			[
+				"td",
+				"td"
+			],
+			[
+				"ite",
+				"itemName"
+			],
+			[
+				"fo",
+				"footable"
+			],
+			[
+				"foot",
+				"fooTable_path"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bor",
+				"border-width"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"my",
+				"myValue"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"bo",
+				"border-width"
+			],
+			[
+				"bord",
+				"border-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"p",
+				"padding-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"im",
+				"img"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "documentation/Design.md",
+			"settings":
+			{
+				"buffer_size": 4548,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/table.js",
+		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/jquery-1.9.1.min.js",
+		"/D/github/BBLG/documentation/Requirements.md",
+		"/D/github/BBLG/documentation/Design.md",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Control_ProjectTask.html",
+		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Item_ProjectTask.html",
+		"/D/SkyDrive/SharePoint/PIP LLC/Assets/global.css",
+		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Item_SlideImage.html",
+		"/D/SkyDrive/SharePoint/PIP LLC/Assets/test.html",
+		"/C/Users/Chris/Desktop/PSR.webpart",
+		"/D/SkyDrive/SharePoint/PIP LLC/Assets/apppermission.xml",
+		"/D/SkyDrive/SharePoint/PIP LLC/Search Results Webpart/Control_SlideImage.html",
+		"//pipllc.sharepoint.com@SSL/DavWWWRoot/_catalogs/masterpage/seattle.html",
+		"/D/downloads/Control_SearchResults.html",
+		"/D/downloads/Item_Excel.html",
+		"/D/downloads/Group_Default.html",
+		"/D/downloads/Item_Person.html",
+		"/D/torrents/Stellar.Phoenix.Outlook.PST.Repair.v4.5/Stellar.Phoenix.Outlook.PST.Repair.v4.5/MeGaHeRTZ.nfo",
+		"/D/xampp/htdocs/wp-content/themes/deliccio/sass/_wp.scss",
+		"/D/xampp/htdocs/wp-content/themes/deliccio/sass/_main.scss",
+		"/C/Users/Chris/AppData/Local/Microsoft/SkyDrive/settings/957d9e1aaa908aa6.ini",
+		"/D/xampp/htdocs/init/index.html",
+		"/D/xampp/htdocs/wp-content/themes/deliccio/config.rb",
+		"/D/github/JSOMandDocSet/JSOMandDocSet/Content/App.css",
+		"/C/Users/Chris/Desktop/HTML5-CSS/Lesson2/html5test.html",
+		"/C/Users/Chris/SkyDrive/Development/BBDB/home.html",
+		"/D/xampp/htdocs/wordpress/wp-config-sample.php",
+		"/D/xampp/htdocs/wordpress/wp-content/themes/deliccio/index.php",
+		"/C/Users/Chris/Desktop/JSTest/jstest02.HTML",
+		"/C/Users/Chris/Desktop/HTML5-CSS/html5formtest.html",
+		"/C/Users/Chris/SkyDrive/Development/BBDB/js/myECMA.js",
+		"/D/xampp/phpMyAdmin/config.inc.php",
+		"/D/xampp/htdocs/wp-config.php",
+		"/D/xampp/htdocs/index.php",
+		"/D/xampp/htdocs/wp-blog-header.php",
+		"/D/xampp/htdocs/wp-load.php",
+		"/D/xampp/htdocs/wp-content/index.php",
+		"/D/xampp/htdocs/wp-content/themes/index.php",
+		"/C/Users/Chris/Desktop/Remove3rdFloorPrinters.vbs",
+		"/C/Users/Chris/Desktop/Remove2ndFloorPrinters.vbs",
+		"/C/Users/Chris/Desktop/RemoveOldLegalPrinters.vbs",
+		"/C/Users/Chris/Desktop/RemoveOld1stFloorPrinters.vbs",
+		"/D/torrents/proc_xml_output.xml",
+		"/C/Users/Chris/Desktop/Remove1stFloorPrinters.vbs",
+		"/C/Users/Chris/Desktop/RemoveWil-File",
+		"/C/Users/Chris/Desktop/Remove10.100.4.60",
+		"/C/Users/Chris/Desktop/RemoveOldPrinters.vbs",
+		"/C/Users/Chris/Desktop/banner_part.xsl",
+		"/C/Users/Chris/Desktop/Content",
+		"/C/Users/Chris/Desktop/lq.xml",
+		"/C/Users/Chris/Desktop/HTML5-CSS/Lesson2/styles.css",
+		"/C/Users/Chris/Desktop/HTML5-CSS/html5test.html",
+		"/C/Users/Chris/Desktop/JSTest/helloworld.HTML",
+		"/C/Users/Chris/Desktop/JSTest/TEMPLATE.HTML",
+		"/C/Users/Chris/SQLite/ex2.sql",
+		"/C/Sites/projects/ruby/lesson5.rb",
+		"/C/Users/Chris/SkyDrive/putty/hp8key.pem",
+		"/C/Users/Chris/python/ex1.py",
+		"/C/Sites/projects/ruby/lesson2.rb",
+		"/C/Sites/projects/ruby/lesson1.rb",
+		"/C/Sites/projects/ruby/lesson3.rb",
+		"/C/Users/Chris/Desktop/cwest_sig.html",
+		"/C/Users/Chris/SkyDrive/Development/Ebenezer MTC/home1.html",
+		"/C/Users/Chris/SkyDrive/Development/Ebenezer MTC/home.html",
+		"/C/Users/Chris/SkyDrive/Development/Ebenezer MTC/css/mtc.css",
+		"/C/Users/Chris/SkyDrive/Development/CraftsmanAle/concept/css/my.css",
+		"/C/Users/Chris/SkyDrive/Development/CraftsmanAle/concept/home.html",
+		"/C/Users/Chris/SkyDrive/Documents/eBooks/OReilly.Windows.Server.2012.Up.and.Running.2012.RETAIL.eBook-ELOHiM/elohim.nfo",
+		"/C/Users/Chris/Dropbox/Development/cgb/home.html",
+		"/C/Users/Chris/Dropbox/Development/index.html",
+		"/C/Users/Chris/SkyDrive/Development/CraftsmanAle/concept/css/nathansmith-960-Grid-System-b0c5b98/code/css/text.css",
+		"/C/Users/Chris/SkyDrive/Development/CraftsmanAle/concept/css/nathansmith-960-Grid-System-b0c5b98/code/css/960_12_col_rtl.css",
+		"/C/Users/Chris/SkyDrive/Development/CraftsmanAle/concept/css/nathansmith-960-Grid-System-b0c5b98/code/css/960.css",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/css/1.css",
+		"/C/Windows/System32/Drivers/etc/hosts",
+		"/C/Users/Chris/Dropbox/Development/seba.html",
+		"/C/Users/Chris/Dropbox/Development/cgb/cgb.css",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/index.html",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/ModUI/footer.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/ModUI/searchform.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/ModUI/style.css",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/ModUI/header.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/ModUI/index.php",
+		"/C/Users/Chris/Downloads/Torrents/Adobe X/ChingLiu.Install.Notes.nfo",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/searchform.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/footer.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/index.php",
+		"/C/Users/Chris/Dropbox/Development/WP-Blank/header.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Projec",
+			"Due",
+			"	var today = new Date();\n	var dd = today.getDate();\n	var mm = today.getMonth()+1; //January is 0!\n	var yyyy = today.getFullYear();\n\n	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = yyyy+'-'+mm+'-'+dd;\n\n	var todayUS = today;\n	var d = todayUS.substring(8,10);\n	var m = todayUS.substring(5,7); \n	var y = todayUS.substring(0,4);\n\n	todayUS = m + \"/\" + d + \"y\";",
+			"Date",
+			"currDate",
+			"console",
+			"DueDate",
+			"ctx",
+			"it",
+			"wil-print",
+			"wil-file",
+			"wil-print",
+			"192.168.50.40",
+			"bsgdc01",
+			"192.168.50.48",
+			"bsg-file",
+			"complete",
+			"status",
+			"xsl",
+			"Title",
+			"ID",
+			"Status",
+			"DueDate",
+			"date",
+			"fields",
+			"asid",
+			"5",
+			"				",
+			"prefix_5",
+			"grid_4",
+			"grid_5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"wil-file",
+			"10.100.4.60",
+			"wil-file",
+			"wil-vs-print01",
+			"10.100.4.60",
+			"wil-file",
+			"wil-print"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "documentation/Design.md",
+					"settings":
+					{
+						"buffer_size": 4548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1603,
+								1603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 107.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Chris/SkyDrive/Development/Ebenezer MTC/emtc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true
+}
