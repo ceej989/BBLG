@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BLeague::Application.config.secret_key_base = '95fe0f3b4cfa28b5368932183a82b0a593c6de9625ff19b539ded976bcaed046c2869d3b4bff622530fad80502accb30b2deb266e0951206dca2ccc7c427f732'
+BLeague::Application.config.secret_key_base = '78f60a3861308fb42d9b7b158c48cc10942008b31b1240109b7448ab7adfae40c22ff96dbdd65df0e70ae93eb210f9e4d55e337f37e376a94734642b8651e3ad'
