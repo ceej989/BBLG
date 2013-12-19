@@ -9,8 +9,8 @@ To create a website that allows users to track basketball game stats via a mobil
 Requirements:
 
 * As platform agnostic as possible: Accessible on Android, iOS, and Windows Phone devices.
-* Responds to user input in 50ms or less on common devices. 
-* Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". 
+* Responds to user input in 50ms or less on common devices. (STATIC REQ)
+* Simple design that allows users to navigate quickly and easily on screens ranging from 3.5” to 10". (UI REQ)
 * Password-based user authentication with reasonable security.
 * Authenticated league managers.
     * League Managers: can create and manage a single league and it's scorekeepers/stats.

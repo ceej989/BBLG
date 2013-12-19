@@ -13,9 +13,16 @@ As web latency can not be guranteed to be sub 50ms at all times, the application
 #### Simple design that allows users to navigate quickly and easily on screens ranging from 3.5" to 10". 
 Simple design will be achieved with a "low-chrome" and "flat UI" approach as has been adopted by Microsoft's recent desktop and mobile operating systems, iOS version 7, and other examples of current practice in the design space. The project designer is versed in such styles and will prototype the design as needed to acheive simplicity before the product is finished. In addition the foundation HTML toolkit provides some layouts which will make this design goal straightforward.
 
-### User Authentication & Account types.
+#### User Authentication & Account types.
 Authenticating users and determining user priviliges based on account category are very well known web application challenges. Web frameworks in virtually every language include re-usable user authentication toolkits. This project will XXX (need to decide framework between revel, rails, sinatra or other)!!
 User authentication wll be based based on the common model of server-side database of user accounts, as mediated by the chosen framework. Appropriate security will be achieved by only storing salted password hashes using bcrypt or equivalent hash protocol. Available user actions will be based on the authenticated account type, including a standard "admin panel" view for _league managers_.
+
+  * verify a string (the password) meets app req
+  * app req of a string:
+      * check string size (at least 7 characters)
+      * check if at least 1 capital letter is in the string
+      * check if there is at least 1 integer
+
 
 * League managers can create teams and assign players to team rosters.
   * Based on authenticated users and their privs, they can create and manage teams accordingly
