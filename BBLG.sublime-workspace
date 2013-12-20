@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"has",
+				"hascap"
+			],
+			[
+				"le",
+				"legit"
+			],
+			[
 				"projec",
 				"projectURL"
 			],
@@ -159,7 +167,31 @@
 			"file": "documentation/Design.md",
 			"settings":
 			{
-				"buffer_size": 4548,
+				"buffer_size": 4780,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "documentation/Requirements.md",
+			"settings":
+			{
+				"buffer_size": 2621,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "b-league/test/interactors/password_verifier_test.rb",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "b-league/lib/business_objects/Pverify.rb",
+			"settings":
+			{
+				"buffer_size": 466,
 				"line_ending": "Windows"
 			}
 		}
@@ -200,6 +232,8 @@
 	},
 	"file_history":
 	[
+		"/D/github/BBLG/b-league/lib/tasks/focused_test.rake",
+		"/D/github/BBLG/b-league/app/business_objects/pVerify.rb",
 		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/table.js",
 		"/D/SkyDrive/SharePoint/PIP LLC/CQWP - Project Tasks/jquery-1.9.1.min.js",
 		"/D/github/BBLG/documentation/Requirements.md",
@@ -361,7 +395,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -369,15 +403,15 @@
 					"file": "documentation/Design.md",
 					"settings":
 					{
-						"buffer_size": 4548,
+						"buffer_size": 4780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1603,
-								1603
+								3187,
+								3187
 							]
 						],
 						"settings":
@@ -387,7 +421,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 107.0,
+						"translation.y": 327.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "documentation/Requirements.md",
+					"settings":
+					{
+						"buffer_size": 2621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								670,
+								670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 47.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "b-league/test/interactors/password_verifier_test.rb",
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								536,
+								577
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "b-league/lib/business_objects/Pverify.rb",
+					"settings":
+					{
+						"buffer_size": 466,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -401,7 +515,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"layout":
 	{

@@ -15,9 +15,11 @@ class Pverify
 
 	private
 		def istooshort
-			@errors.push("Password is too short (must be at least 7 characters long)")
+			if(@password.length < 7)
+				@errors.push("Password is too short (must be at least 7 characters long)")
 		end
 		def hasinteger
+			if(@password.)
 			@errors.push("Password must contain at least one number")
 		end
 		def hascap
